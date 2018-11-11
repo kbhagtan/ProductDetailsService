@@ -1,9 +1,10 @@
 package com.product.details.ProductDetailsService.controller;
 
 import com.product.details.ProductDetailsService.pojos.ProductDetails;
-import com.product.details.ProductDetailsService.service.ProductDetailsService;
+import com.product.details.ProductDetailsService.service.ProductDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 import springfox.documentation.annotations.Cacheable;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 public class ProductDetailsController {
 
     @Autowired
-    private ProductDetailsService productDetailsService;
+    private ProductDetailsServiceImpl productDetailsService;
 
     /**
      *
@@ -39,6 +40,7 @@ public class ProductDetailsController {
      * @param productName productName
      * @return Availability
      */
+    @ApiIgnore
     @GetMapping("/removeProductFromCart/{quantity}/{productName}")
     public String productCart(@RequestParam int quantity, String productName)  {
         boolean productExists = productDetailsService.checkIfProductExists(productName);
