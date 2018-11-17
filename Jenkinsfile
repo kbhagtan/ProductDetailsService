@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven6') {
-                    sh 'mvn clean package'
+                    bat  "mvn clean package"
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven6') {
-                    sh 'mvn test'
+                    bat  "mvn test"
                 }
             }
         }
