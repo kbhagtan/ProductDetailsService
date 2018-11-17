@@ -4,8 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.product.details</groupId>
-	<artifactId>ProductDetailsService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>productDetails</artifactId>
 	<packaging>war</packaging>
 
 	<name>ProductDetailsService</name>
